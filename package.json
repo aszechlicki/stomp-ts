@@ -1,0 +1,36 @@
+{
+  "name": "stomp-ts",
+  "version": "0.0.1",
+  "description": "Stomp client for TypeScript",
+  "main": "dist/src/index.js",
+  "typings": "dist/src/index.d.ts",
+  "scripts": {
+    "postinstall": "autodts link",
+    "prepublish": "tsc && autodts generate",
+    "test": "test"
+  },
+  "typescript": {
+    "definition": "index.d.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aszechlicki/stomp-ts.git"
+  },
+  "keywords": [
+    "stomp",
+    "stomp-client",
+    "typescript"
+  ],
+  "author": "Arkadiusz Szechlicki",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aszechlicki/stomp-ts/issues"
+  },
+  "homepage": "https://github.com/aszechlicki/stomp-ts#readme",
+  "devDependencies": {
+    "@lib/autodts-generator": "~0.0.1",
+    "autodts": "0.0.6",
+    "tslint": "^3.13.0",
+    "typescript": "^1.8.10"
+  }
+}
