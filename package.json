@@ -6,7 +6,7 @@
   "typings": "dist/src/index.d.ts",
   "scripts": {
     "postinstall": "autodts link",
-    "prepublish": "tsc && autodts generate",
+    "prepublish": "tsc && dts-generator --name stomp-ts --project ./ --out stomp-ts.d.ts && gulp dist",
     "test": "test"
   },
   "typescript": {
@@ -28,8 +28,10 @@
   },
   "homepage": "https://github.com/aszechlicki/stomp-ts#readme",
   "devDependencies": {
-    "@lib/autodts-generator": "~0.0.1",
-    "autodts": "0.0.6",
+    "dts-generator": "^1.7.0",
+    "gulp": "^3.9.1",
+    "gulp-jsmin": "^0.1.5",
+    "gulp-rename": "^1.2.2",
     "tslint": "^3.13.0",
     "typescript": "^1.8.10"
   }
